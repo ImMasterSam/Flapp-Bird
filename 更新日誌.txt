@@ -1,0 +1,6 @@
+v1.1 :
+
+-Add quit button
+-Add update log
+-Display score when
+ game over
