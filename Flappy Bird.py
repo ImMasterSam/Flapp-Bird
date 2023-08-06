@@ -1,5 +1,3 @@
-from ensurepip import version
-from re import T
 import pygame
 import objects
 from time import sleep
