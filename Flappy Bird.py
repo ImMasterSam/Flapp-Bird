@@ -8,20 +8,20 @@ pygame.init()
 #背景
 screen = pygame.display.set_mode((640,1000))
 pygame.display.set_caption("Flappy 跳跳鳥")
-icon = pygame.image.load("圖片\\icon.png")
+icon = pygame.image.load("圖片/icon.png")
 pygame.display.set_icon(icon)
-bg_pic = pygame.image.load("圖片\\background.png")
+bg_pic = pygame.image.load("圖片/background.png")
 bg_pic = pygame.transform.scale2x(bg_pic)
 bg_pic = bg_pic.convert()
 
 #圖片物件
-logo = pygame.image.load("圖片\\Logo.png")
+logo = pygame.image.load("圖片/Logo.png")
 logo = pygame.transform.scale(logo, (534, 144)).convert_alpha()
-go_title = pygame.image.load("圖片\\GameOver.png")
+go_title = pygame.image.load("圖片/GameOver.png")
 go_title = pygame.transform.scale(go_title, (480, 105)).convert_alpha()
-my_name = pygame.image.load("圖片\\My_Name.png")
+my_name = pygame.image.load("圖片/My_Name.png")
 my_name = pygame.transform.scale(my_name, (200, 40)).convert_alpha()
-guide = pygame.image.load("圖片\\Guide.png")
+guide = pygame.image.load("圖片/Guide.png")
 guide = pygame.transform.scale(guide, (462, 330)).convert_alpha()
 
 
@@ -153,6 +153,9 @@ while running:
                 running = False
             if event.type == pygame.MOUSEBUTTONDOWN:
                 bird.jump()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    bird.jump()
 
         #更新畫面
         score_text = font1.render(str(score), True, (220, 220, 220))
