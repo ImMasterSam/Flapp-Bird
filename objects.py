@@ -15,7 +15,7 @@ class Bird(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         #載入動畫包
         for i in range(1, 4):
-            pic = pygame.image.load(f"圖片\\Bird_{i}.png")
+            pic = pygame.image.load(f"圖片/Bird_{i}.png")
             self.sprites.append(pygame.transform.scale(pic, (68, 48)).convert_alpha())
 
         self.image = self.sprites[self.sp_num//5]
@@ -64,7 +64,7 @@ class Tube(pygame.sprite.Sprite):
 
         pygame.sprite.Sprite.__init__(self)
 
-        self.image = pygame.image.load(f"圖片\\{position}_tube.png")
+        self.image = pygame.image.load(f"圖片/{position}_tube.png")
         self.image = pygame.transform.scale(self.image, (100, 600)).convert_alpha()
         self.mask = pygame.mask.from_surface(self.image)
         self.x = 640
@@ -108,7 +108,7 @@ class Button(pygame.sprite.Sprite):
 
         self.sprites = []
         for i in range(1, sp_num+1):
-            pic = pygame.image.load(f"圖片\\{name}_{i}.png")
+            pic = pygame.image.load(f"圖片/{name}_{i}.png")
             self.sprites.append(pygame.transform.scale(pic, (width*scalex, hight*scalex)).convert_alpha())
 
         self.image = self.sprites[0]
